@@ -7,6 +7,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
-        Problem10871.run();
+        Problem1939.run();
     }
 }
