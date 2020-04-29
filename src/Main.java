@@ -1,8 +1,9 @@
-import BOJ.Problem15649;
+import BOJ.Problem1915;
 
 public class Main {
     public static void main(String[] args) {
-        Problem15649.run();
+        Problem1915.run();
     }
 }
+
 
