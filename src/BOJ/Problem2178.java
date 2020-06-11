@@ -18,11 +18,11 @@ public class Problem2178 {
                 arr[i][j] = s.charAt(j - 1);
             }
         }
-        int[][] arrI = new int[row +2][col + 2];
+        int[][] arrI = new int[row + 2][col + 2];
 
         for (int i = 1; i <= row; i++) {
             for (int j = 1; j <= col; j++) {
-                arrI[i][j] =  arr[i][j] - '0';
+                arrI[i][j] = arr[i][j] - '0';
             }
         }
 

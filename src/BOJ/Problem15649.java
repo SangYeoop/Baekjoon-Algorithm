@@ -12,18 +12,18 @@ public class Problem15649 {
 
         int[] selected = new int[m];
         boolean[] visited = new boolean[n];
-        dfs(selected,visited, 0, n, m);
+        dfs(selected, visited, 0, n, m);
     }
 
-    public static void dfs(int[] selected, boolean[] visited, int depth,int n, int m) {
+    public static void dfs(int[] selected, boolean[] visited, int depth, int n, int m) {
         if (depth == m) {
-            for(int i = 0; i <selected.length; i++) {
+            for (int i = 0; i < selected.length; i++) {
                 System.out.print(selected[i] + " ");
             }
             System.out.println("");
-            return ;
+            return;
         }
-        for (int i = 1; i <= n; i++){
+        for (int i = 1; i <= n; i++) {
             if (!visited[i - 1]) {
                 selected[depth] = i;
                 visited[i - 1] = true;

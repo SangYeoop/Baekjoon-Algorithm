@@ -10,7 +10,7 @@ public class Problem15953 {
 
         int num = sc.nextInt();
 
-        for(int i = 0; i < num; i++) {
+        for (int i = 0; i < num; i++) {
             int first = sc.nextInt();
             int second = sc.nextInt();
             int result = 0;

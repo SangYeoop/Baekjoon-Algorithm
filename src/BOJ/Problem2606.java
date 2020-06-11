@@ -30,7 +30,7 @@ public class Problem2606 {
             return 0;
         result++;
         searched[start] = true;
-        for(int i = 1; i <= num; i++) {
+        for (int i = 1; i <= num; i++) {
             if (adj[start][i] == 1 && i != start) {
                 result += search(adj, i, num, searched);
             }

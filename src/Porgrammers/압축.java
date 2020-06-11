@@ -11,19 +11,19 @@ public class 압축 {
         Map<String, Integer> map = new HashMap<>();
 
         for (int i = 1; i <= 26; i++) {
-            char c = (char)(i + 'A' - 1);
+            char c = (char) (i + 'A' - 1);
             String s = String.valueOf(c);
             map.put(s, i);
         }
         int idx = 27;
         StringBuilder sb = new StringBuilder(msg);
-        while(!sb.toString().equals("")) {
+        while (!sb.toString().equals("")) {
             int count = 1;
-            while(true) {
+            while (true) {
                 String substr = sb.substring(0, count);
                 if (map.containsKey(substr)) {
                     count++;
-                } else{
+                } else {
                     answer.add(map.get(sb.substring(0, count - 1)));
                     map.put(substr, idx++);
                     sb.delete(0, count - 1);

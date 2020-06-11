@@ -21,8 +21,8 @@ public class Problem1236 {
         }
 
         int count1 = 0, count2 = 0;
-        for(int i = 0; i < r; i++){
-            for(int j = 0; j < c; j++) {
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
                 if (state[i][j])
                     break;
                 if (j == c - 1)
@@ -30,11 +30,11 @@ public class Problem1236 {
             }
         }
 
-        for(int i = 0; i < c; i++) {
-            for (int j = 0; j < r; j++){
-                if(state[j][i])
+        for (int i = 0; i < c; i++) {
+            for (int j = 0; j < r; j++) {
+                if (state[j][i])
                     break;
-                if(j == r - 1)
+                if (j == r - 1)
                     count2++;
             }
         }

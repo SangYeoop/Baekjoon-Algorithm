@@ -19,19 +19,19 @@ class File {
         return "Head : " + head + " Number :" + number + " File Name : " + name + "\n";
     }
 }
-class FileComparator implements Comparator<File>{
+
+class FileComparator implements Comparator<File> {
     @Override
     public int compare(File o1, File o2) {
         if (o1.head.toLowerCase().compareTo(o2.head.toLowerCase()) > 0) {
             return 1;
-        }
-        else if (o1.head.toLowerCase().compareTo(o2.head.toLowerCase()) == 0){
-            if(Integer.parseInt(o1.number) > Integer.parseInt(o2.number))
+        } else if (o1.head.toLowerCase().compareTo(o2.head.toLowerCase()) == 0) {
+            if (Integer.parseInt(o1.number) > Integer.parseInt(o2.number))
                 return 1;
-            else if(Integer.parseInt(o1.number) == Integer.parseInt(o2.number))
+            else if (Integer.parseInt(o1.number) == Integer.parseInt(o2.number))
                 return 0;
             else
-            return -1;
+                return -1;
         }
         return -1;
     }
@@ -41,20 +41,19 @@ public class 파일명정렬 {
     public String[] solution(String[] files) {
         String[] answers;
         Vector<File> vec = new Vector<>();
-        for(int i = 0; i < files.length; i++) {
+        for (int i = 0; i < files.length; i++) {
             StringBuilder head = new StringBuilder();
             StringBuilder num = new StringBuilder();
             for (int j = 0; j < files[i].length(); j++) {
                 head.append(files[i].charAt(j));
-                if(Character.isDigit(files[i].charAt(j))) {
+                if (Character.isDigit(files[i].charAt(j))) {
                     num.append(files[i].charAt(j));
                     j++;
-                    while(j < files[i].length()) {
-                        if(Character.isDigit(files[i].charAt(j))) {
+                    while (j < files[i].length()) {
+                        if (Character.isDigit(files[i].charAt(j))) {
                             num.append(files[i].charAt(j));
                             j++;
-                        }
-                        else
+                        } else
                             break;
                     }
                     break;
@@ -66,7 +65,7 @@ public class 파일명정렬 {
         }
         vec.sort(new FileComparator());
         answers = new String[vec.size()];
-        for(int i = 0; i < vec.size(); i++) {
+        for (int i = 0; i < vec.size(); i++) {
             answers[i] = vec.get(i).name;
         }
         return answers;

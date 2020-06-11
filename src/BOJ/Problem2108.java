@@ -24,27 +24,27 @@ public class Problem2108 {
         int max = 0;
         int min = 0;
         for (int i = 8000; i >= 0; i--) {
-            if(arr[i] >= 1) {
+            if (arr[i] >= 1) {
                 max = i;
                 break;
             }
         }
         for (int i = 0; i <= 8000; i++) {
-            if(arr[i] >= 1){
+            if (arr[i] >= 1) {
                 min = i;
                 break;
             }
         }
-        int offset = Math.round((float)n / 2);
+        int offset = Math.round((float) n / 2);
         int temp = 0;
         int middle = 0;
         boolean answer = false;
         for (int i = 0; i <= 8000; i++) {
-            if(arr[i] > maxValue) {
+            if (arr[i] > maxValue) {
                 maxIndex = i;
                 maxValue = arr[i];
                 second = false;
-            }else if(arr[i] == maxValue && !second) {
+            } else if (arr[i] == maxValue && !second) {
                 maxIndex = i;
                 second = true;
             }
@@ -55,7 +55,7 @@ public class Problem2108 {
             }
         }
 
-        System.out.println(Math.round((float)sum / n));
+        System.out.println(Math.round((float) sum / n));
         System.out.println(middle);
         System.out.println(maxIndex - 4000);
         System.out.println(max - min);

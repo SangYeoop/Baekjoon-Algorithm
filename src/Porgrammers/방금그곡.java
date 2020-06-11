@@ -2,7 +2,7 @@ package Porgrammers;
 
 public class 방금그곡 {
     public String solution(String m, String[] musicInfos) {
-        String answer ="(None)";
+        String answer = "(None)";
         int musicTime = 0;
         for (int i = 0; i < musicInfos.length; i++) {
             String[] musicInfo = musicInfos[i].split(",");
@@ -10,7 +10,7 @@ public class 방금그곡 {
             String[] endTime = musicInfo[1].split(":");
             String musicTitle = musicInfo[2];
 
-            int diff =getMin(startTime,endTime);
+            int diff = getMin(startTime, endTime);
             StringBuilder musicMelody = new StringBuilder(changeMelody(musicInfo[3]));
             StringBuilder melody = new StringBuilder(changeMelody(m));
 
@@ -29,11 +29,13 @@ public class 방금그곡 {
         }
         return answer;
     }
+
     public int getMin(String[] startTime, String[] endTime) {
         int startMin = Integer.parseInt(startTime[0]) * 60 + Integer.parseInt(startTime[1]);
         int endMin = Integer.parseInt(endTime[0]) * 60 + Integer.parseInt(endTime[1]);
         return Math.abs(endMin - startMin);
     }
+
     public String changeMelody(String melody) {
         melody = melody.replace("C#", "c").replace("D#", "d").replace("F#", "f")
                 .replace("E#", "e").replace("G#", "g").replace("A#", "a");

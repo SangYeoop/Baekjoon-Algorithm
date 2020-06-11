@@ -14,7 +14,7 @@ public class Problem1874 {
 
         int currentMaxValue = 0;
         int i = 1;
-        while(true) {
+        while (true) {
             int num = sc.nextInt();
             if (num > currentMaxValue) {
                 currentMaxValue = num;
@@ -30,13 +30,13 @@ public class Problem1874 {
                 if (stack.peek() == num) {
                     queue.add('-');
                     stack.pop();
-                }else {
+                } else {
                     System.out.println("NO");
                     break;
                 }
             }
-            if (queue.size() == n * 2){
-                while(!queue.isEmpty())
+            if (queue.size() == n * 2) {
+                while (!queue.isEmpty())
                     System.out.println(queue.poll());
                 break;
             }

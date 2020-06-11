@@ -13,8 +13,9 @@ public class Problem1939 {
         queue = new LinkedList<Node>();
         maxWeight = 0;
     }
+
     void queueSearch() {
-        while(true) {
+        while (true) {
             if (!queue.isEmpty())
                 queue.poll().setMaxWeight(this);
             else
@@ -49,7 +50,7 @@ public class Problem1939 {
     }
 }
 
-class Node{
+class Node {
     ArrayList<Node> nodes;
     ArrayList<Integer> pathValue;
     boolean isSearched;
@@ -68,7 +69,7 @@ class Node{
         if (isLast) {
             if (problem.maxWeight < weight)
                 problem.maxWeight = weight;
-            return ;
+            return;
         }
         if (isSearched == false) {
             for (int i = 0; i < nodes.size(); i++) {

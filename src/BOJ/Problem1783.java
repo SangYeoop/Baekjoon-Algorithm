@@ -13,14 +13,12 @@ public class Problem1783 {
         int count = 1;
         if (n >= 3 && m >= 7) {
             count = m - 2;
-        }
-        else if (n == 2 && m >= 3) {
+        } else if (n == 2 && m >= 3) {
             m--;
             count = m / 2 + 1;
             if (count > 4)
                 count = 4;
-        }
-        else if (n >= 3 && m >= 2) {
+        } else if (n >= 3 && m >= 2) {
             count = m;
             if (count > 4)
                 count = 4;

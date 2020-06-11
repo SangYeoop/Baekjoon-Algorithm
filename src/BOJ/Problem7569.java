@@ -75,8 +75,8 @@ public class Problem7569 {
         int[] dz = {0, 0, 0, 0, -1, 1};
 
         for (int k = 0; k < 6; k++) {
-            if (arr[b + dz[k]][i + dx[k]][j + dy[k]] == 0 && !visit[b + dz[k]][i +dx[k]][j + dy[k]]) {
-                visit[b+dz[k]][i +dx[k]][j +dy[k]] = true;
+            if (arr[b + dz[k]][i + dx[k]][j + dy[k]] == 0 && !visit[b + dz[k]][i + dx[k]][j + dy[k]]) {
+                visit[b + dz[k]][i + dx[k]][j + dy[k]] = true;
                 Integer[] temp = new Integer[3];
                 temp[0] = i + dx[k];
                 temp[1] = j + dy[k];

@@ -2,16 +2,15 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class Problem9498{
+public class Problem9498 {
 
     private int score;
 
-    private void setScore(int score){
+    private void setScore(int score) {
         this.score = score;
     }
 
-    private void printGrade()
-    {
+    private void printGrade() {
         if (score >= 90 && score <= 100)
             System.out.println("A");
         else if (score >= 80 && score <= 89)
@@ -24,8 +23,7 @@ public class Problem9498{
             System.out.println("F");
     }
 
-    public static void run()
-    {
+    public static void run() {
         Scanner sc = new Scanner(System.in);
         int score = sc.nextInt();
         Problem9498 problem = new Problem9498();

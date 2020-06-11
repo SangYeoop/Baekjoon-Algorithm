@@ -35,12 +35,12 @@ public class Problem15954 {
         wr.close();
     }
 
-    public static double calculate(List<Integer> arr, double sum){
+    public static double calculate(List<Integer> arr, double sum) {
         int size = arr.size();
         double m = sum / size;
 
         double dSum = 0;
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             double temp = arr.get(i) - m;
             dSum += temp * temp;
         }
